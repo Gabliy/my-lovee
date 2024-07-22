@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu amorzinho - Você é Incrível!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            color: #d63384;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff66b2;
+        }
+        .quiz-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ff66b2;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e055a0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸💖 Quiz meu amorzinho- Você é Incrível! 💖🌸</h1>
+    <div class="quiz-container">
+        <div class="question active" id="q1">
+            <p><strong>1. O que eu mais admiro em você?</strong></p>
+            <ul class="options">
+                <li><input type="checkbox" name="q1"> Sua gentileza 🌟</li>
+                <li><input type="checkbox" name="q1"> Seu senso de humor 😂</li>
+                <li><input type="checkbox" name="q1"> Sua inteligência 🧠</li>
+                <li><input type="checkbox" name="q1"> Sua dedicação 💪</li>
+            </ul>
+            <button onclick="nextQuestion(1)">Próxima</button>
+        </div>
+        <div class="question" id="q2">
+            <p><strong>2. Qual qualidade sua me faz sorrir sempre?</strong></p>
+            <ul class="options">
+                <li><input type="checkbox" name="q2"> Seu carinho 💕</li>
+                <li><input type="checkbox" name="q2"> Sua paciência 🧘</li>
+                <li><input type="checkbox" name="q2"> Sua alegria 🌞</li>
+                <li><input type="checkbox" name="q2"> Sua sinceridade 💬</li>
+            </ul>
+            <button onclick="nextQuestion(2)">Próxima</button>
+        </div>
+        <div class="question" id="q3">
+            <p><strong>3. O que você faz que me deixa impressionada?</strong></p>
+            <ul class="options">
+                <li><input type="checkbox" name="q3"> Seus talentos e habilidades 🌟</li>
+                <li><input type="checkbox" name="q3"> Seu jeito de resolver problemas 🛠️</li>
+                <li><input type="checkbox" name="q3"> Sua criatividade 🎨</li>
+                <li><input type="checkbox" name="q3"> Sua capacidade de amar 💖</li>
+            </ul>
+            <button onclick="nextQuestion(3)">Próxima</button>
+        </div>
+        <div class="question" id="q4">
+            <p><strong>4. Qual é o seu melhor atributo?</strong></p>
+            <ul class="options">
+                <li><input type="checkbox" name="q4"> Seu coração generoso 💓</li>
+                <li><input type="checkbox" name="q4"> Sua determinação 🚀</li>
+                <li><input type="checkbox" name="q4"> Sua inteligência 🧠</li>
+                <li><input type="checkbox" name="q4"> Sua personalidade encantadora ✨</li>
+            </ul>
+            <button onclick="nextQuestion(4)">Próxima</button>
+        </div>
+        <div class="question" id="q5">
+            <p><strong>Como você me faz sentir?</strong></p>
+            <ul class="options">
+                <li><input type="checkbox" name="q5"> Amada 💖</li>
+                <li><input type="checkbox" name="q5"> Feliz 😃</li>
+                <li><input type="checkbox" name="q5"> Inspirada 🌈</li>
+                <li><input type="checkbox" name="q5"> Completa 💫</li>
+            </ul>
+            <button onclick="showFinalMessage()">Finalizar</button>
+        </div>
+        <div class="question" id="final-message">
+            <p><strong>Você é realmente incrível! E eu adoraria passar um tempo especial com você. Que tal um jantar juntos amanhã as 18h?</strong></p>
+            <p>Vamos comemorar todas as suas qualidades maravilhosas e os momentos incríveis que compartilhamos. Eu te amoooooo🌟</p>
+            <button onclick="location.href='https://youtu.be/KN3IemyqJJw?t=19'">Enviar Convite</button>
+        </div>
+    </div>
+    <script>
+        function nextQuestion(current) {
+            document.getElementById('q' + current).classList.remove('active');
+            document.getElementById('q' + (current + 1)).classList.add('active');
+        }
+
+        function showFinalMessage() {
+            document.getElementById('q5').classList.remove('active');
+            document.getElementById('final-message').classList.add('active');
+        }
+    </script>
+</body>
+</html>
